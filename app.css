@@ -1,0 +1,365 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #1d3051;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+header .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 7%;
+    background-color: green;
+}
+
+.info .links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+.info .icons a {
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+}
+
+header .titlebar .searchbox input {
+    cursor: pointer;
+    color: green;
+    height: 30px;
+    padding-left: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.search-form input {
+    width: 100%;
+    padding-right: 5px;
+    font-size: 20px;
+    text-transform: none;
+    color: #666;
+}
+
+.search-form label {
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#head {
+    padding: 10px 5%;
+    background-color: green;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 7%;
+    background-color: orange;
+}
+
+header .titlebar .name {
+    color: green;
+    font-size: 30px;
+}
+
+header .titlebar .navbar a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    margin-left: 10px;
+}
+
+ul {
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+
+li {
+    margin-left: 8px;
+    padding: 5px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li :hover {
+    color: #b2ff00;
+}
+
+.active,
+li:hover {
+    background-color: #2bab0d;
+    border-radius: 3px;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+span {
+    color: orangered;
+}
+
+li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: rgb(0, 100, 0);
+    margin-top: 5px;
+    margin-left: -5px;
+    border-radius: 5px;
+}
+
+li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+li:hover .sub-menu-1 ul li a:hover {
+    color: #b2ff00;
+}
+
+.container {
+    margin: 40px 15px;
+    width: 45%;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.7);
+    resize: both;
+    overflow: auto;
+    outline: auto;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background-color: whitesmoke;
+}
+
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus {
+    background-color: #add;
+    outline: none;
+}
+
+.registerbtn {
+    background-color: teal;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    width: 65%;
+    margin: auto;
+    opacity: 0.8;
+    border-radius: 25px;
+    position: center;
+    margin-bottom: 0.5px;
+    margin-left: 50px;
+    margin-top: 28px;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+.showcase {
+    background-image: url("project images/home-bg.jpg");
+    background-size: cover;
+    height: 580px;
+    padding: 10px 7%;
+}
+
+.showcase .content {
+    margin-top: 140px;
+    width: 50%;
+}
+
+.showcase .content h3 {
+    padding: 0;
+    margin: 0;
+    color: green;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.showcase .content .learn {
+    color: orangered;
+}
+
+.showcase .content .learn a {
+    color: white;
+    background-color: #e9c939;
+    margin-top: 40px;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.showcase .content h4 {
+    padding: 0;
+    margin: 0;
+    color: orangered;
+    text-align: center;
+    font-size: 30px;
+}
+
+.showcase .content p {
+    font-size: 20px;
+}
+
+.products {
+    padding: 10px 7%;
+    background-color: rgb(228, 223, 214);
+}
+
+.products .title h2 {
+    padding: 0;
+    margin: 0;
+    color: orangered;
+    font-size: 45px;
+    text-align: center;
+}
+
+.products .title h2 span {
+    color: green;
+}
+
+.products .containers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.products .containers .box {
+    flex: 1 1 40px;
+    border: 2px solid orangered;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(255, 253, 240);
+}
+
+.products .containers .box img {
+    height: 200px;
+    width: 240px;
+}
+
+.products .containers .box:hover img {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.products .containers .box:hover {
+    border: 2px solid green;
+}
+
+.products .containers .box h3 {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 100px;
+    margin: 20px 20px 10px 100px;
+}
+
+#footer {
+    padding: 10px 7%;
+    background-color: #1d3051;
+}
+
+#footer .containers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#footer .containers .boxes {
+    flex: 1 1 40px;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+}
+
+#footer .containers .boxes h3 {
+    padding: 0;
+    margin: 0 0 10px 0;
+    color: orangered;
+}
+
+#footer .containers .boxes a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #1d3051;
+    width: 100%;
+}
+
+#footer .containers .boxes a:hover {
+    color: white;
+    background-color: green;
+    transition: .5s;
+}
+
+.register p {
+    font-size: 40px;
+    color: orangered;
+}
+
+.register {
+    background-image: url("/pic/background.jpg");
+    background-position: center;
+    font-family: sans-serif;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.checkbox {
+    color: blue;
+}
