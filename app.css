@@ -344,22 +344,3 @@ input[type='email']:focus {
     background-color: green;
     transition: .5s;
 }
-
-.register p {
-    font-size: 40px;
-    color: orangered;
-}
-
-.register {
-    background-image: url("/pic/background.jpg");
-    background-position: center;
-    font-family: sans-serif;
-    height: 100vh;
-    position: relative;
-    width: 100%;
-    background-repeat: no-repeat;
-}
-
-.checkbox {
-    color: blue;
-}
