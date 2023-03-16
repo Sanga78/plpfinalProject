@@ -249,6 +249,7 @@ section {
 }
 
 .home .login_container {
+    display: block;
     flex: 1 1 45rem;
     background-color: grey;
     padding: 7%;
@@ -257,6 +258,10 @@ section {
     margin: auto;
     height: 80vh;
     margin-top: 10vh;
+}
+
+#login-form {
+    display: none;
 }
 
 .home .login_container h1 {

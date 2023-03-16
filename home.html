@@ -12,7 +12,7 @@
     />
 
     <!-- custom css link -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.css">
 
     <!-- javascript link -->
     <script type="module" src="script.js" defer></script>
@@ -43,7 +43,7 @@
             </div>
 
             <div class="login">
-                <a href="" class="btn" id="login-btn">login</a>
+                <a href="" class="btn" id="login-btn" onclick="document.getElementById( 'login-form').style.display='initial' " style="width:auto ">login</a>
 
             </div>
         </div>
@@ -68,7 +68,7 @@
                 eaque at?</p>
             <a href="#" class="btn">Order now</a>
         </div>
-        <div class="login_container">
+        <div class="login_container" id="login-form">
             <div id="main">
                 <h1>Sign In</h1>
                 <input id="email" type="email" placeholder="Email">
