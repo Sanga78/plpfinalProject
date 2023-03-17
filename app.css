@@ -376,7 +376,23 @@ button {
 }
 
 .menu .box-container .box img {
-    height: 10rem;
+    height: 15rem;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.menu .box-container .box .icons a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border: var(--border);
+    color: #fff;
+    margin: .3rem;
+}
+
+.menu .box-container .box .icons a:hover {
+    background: var(--main-color);
 }
 
 .menu .box-container .box h3 {
@@ -397,11 +413,11 @@ button {
     font-weight: lighter;
 }
 
-.menu .box-container .box:hover {
+#fruits .box-container .box:hover {
     background: #fff;
 }
 
-.menu .box-container .box:hover>* {
+#fruits .box-container .box:hover>* {
     color: var(--black);
 }
 
@@ -417,30 +433,16 @@ button {
     padding: 2rem;
 }
 
-.products .box-container .box .icons a {
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    border: var(--border);
-    color: #fff;
-    margin: .3rem;
-}
-
-.products .box-container .box .icons a:hover {
-    background: var(--main-color);
+.products .box-container .box .image {
+    padding: 1rem 0;
 }
 
 .products .box-container .box .image {
-    padding: 2.5rem 0;
-}
-
-.products .box-container .box .image {
-    padding: 2.5rem 0;
+    padding: 1rem 0;
 }
 
 .products .box-container .box .image img {
-    height: 25rem;
+    height: 20rem;
 }
 
 .products .box-container .box .content h3 {
@@ -512,13 +514,6 @@ button {
     flex-wrap: wrap;
     gap: 1rem;
 }
-
-
-/* .contact .row .map {
-    flex: 1 1 45rem;
-    width: 100%;
-    object-fit: cover;
-} */
 
 .contacts .row form {
     flex: 1 1 45rem;
