@@ -126,7 +126,7 @@ let cartItem = document.querySelector('.cart-items-container');
 document.querySelector('#cart-btn').onclick = () => {
     cartItem.classList.toggle('active');
     navbar.classList.remove('active');
-    cartItem.classList.remove('active');
+    searchForm.classList.remove('active');
 }
 
 window.onscroll = () => {
@@ -140,4 +140,127 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+// adding and removing the items to cart
+
+const cartItems = [];
+
+// Get elements
+const productList = document.getElementById("product-list");
+const cartItemsList = document.getElementById("cart-items");
+const clearCartBtn = document.getElementById("clear-cart");
+const checkOutBtn = document.getElementById("check-out");
+// Add event listener to product list
+productList.addEventListener("click", addToCart);
+
+// Add event listener to clear cart button
+clearCartBtn.addEventListener("click", clearCart);
+
+// Add event listener to checkout
+checkOutBtn.addEventListener("click", checkOut);
+
+function addToCart(event) {
+    const clickedBtn = event.target;
+    if (clickedBtn.classList.contains("add-to-cart")) {
+        const productId = clickedBtn.getAttribute("data-id");
+        const product = getProductById(productId);
+        if (product) {
+            const cartItem = {
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                quantity: 1,
+            };
+            const existingCartItem = cartItems.find(item => item.id === cartItem.id);
+            if (existingCartItem) {
+                existingCartItem.quantity++;
+            } else {
+                cartItems.push(cartItem);
+            }
+            renderCartItems();
+            calculateTotalPrice();
+        }
+    }
+}
+
+function getProductById(id) {
+    // Database required
+    // Sample hard coded data
+    const products = [
+        { id: "product-1", name: "Apple", price: 10 },
+        { id: "product-2", name: "Product 2", price: 15 },
+        { id: "product-3", name: "Product 3", price: 20 },
+        { id: "product-3.1", name: "Orange Juice", price: 50 },
+        { id: "product-3.2", name: "Mango Juice", price: 50 },
+        { id: "product-3.3", name: "Pineapple juice", price: 80 },
+        { id: "product-3.4", name: "Passion fruit juice", price: 55 },
+        { id: "product-3.5", name: "Avocado juice", price: 50 },
+        { id: "product-2.1", name: "Apples", price: 45 },
+        { id: "product-2.2", name: "Oranges", price: 20 },
+        { id: "product-2.3", name: "Bnanas", price: 20 },
+        { id: "product-2.4", name: "Blue grapes", price: 15 },
+        { id: "product-2.5", name: "Watermelon", price: 200 },
+        { id: "product-2.6", name: "Avocadoes", price: 20 },
+        { id: "product-2.7", name: "Lemons", price: 20 },
+        { id: "product-2.8", name: "Strawberries", price: 100 },
+        { id: "product-2.9", name: "Mangoes", price: 30 },
+        { id: "product-2.10", name: "Passion fruits", price: 100 }
+    ];
+    return products.find(product => product.id === id);
+}
+
+function renderCartItems() {
+    cartItemsList.innerHTML = "";
+    cartItems.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+      <span>${item.name}</span>
+      <span>${item.quantity} x $${item.price}</span>
+      <button class="remove-from-cart" data-id="${item.id}">Remove</button>
+    `;
+        cartItemsList.appendChild(li);
+    });
+    if (cartItems.length === 0) {
+        const li = document.createElement("li");
+        li.innerText = "Your cart is empty";
+        cartItemsList.appendChild(li);
+    }
+}
+
+function clearCart() {
+    cartItems.length = 0;
+    renderCartItems();
+    calculateTotalPrice();
+}
+
+
+function removeCartItem(event) {
+    const clickedBtn = event.target;
+    if (clickedBtn.classList.contains("remove-from-cart")) {
+        const productId = clickedBtn.getAttribute("data-id");
+        const existingCartItem = cartItems.find(item => item.id === productId);
+        if (existingCartItem) {
+            existingCartItem.quantity--;
+            if (existingCartItem.quantity <= 0) {
+                cartItems.splice(cartItems.indexOf(existingCartItem), 1);
+            }
+            renderCartItems();
+            calculateTotalPrice();
+        }
+    }
+}
+
+function calculateTotalPrice() {
+    const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    const li = document.createElement("li");
+    li.innerText = `Total Price: $${totalPrice}`;
+    cartItemsList.appendChild(li);
+}
+
+// Add event listener to cart items list for removing items
+cartItemsList.addEventListener("click", removeCartItem);
+
+function checkOut() {
+    window.alert("Do you want to check out")
 }
