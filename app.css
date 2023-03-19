@@ -58,7 +58,8 @@ section {
     text-transform: uppercase;
 }
 
-.btn {
+.btn,
+button {
     margin-top: 1rem;
     display: inline-block;
     padding: .9rem 3rem;
@@ -167,56 +168,53 @@ section {
 .header .cart-items-container {
     position: absolute;
     top: 100%;
+    align-items: center;
     right: -100%;
     height: calc(100vh - 9.5rem);
     width: 35rem;
     background: #fff;
-    padding: 0 1.5rem;
+    padding: 0;
+}
+
+.header .cart-items-container .remove-from-cart {
+    width: 25%;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 5px;
 }
 
 .header .cart-items-container.active {
     right: 0;
 }
 
-.header .cart-items-container .cart-item {
-    position: relative;
-    margin: 2rem 0;
-    display: flex;
-    align-items: center;
+.header .cart-items-container ul {
+    padding: 1rem;
+    list-style-type: none;
+    background: #f7f2f2;
     gap: 1.5rem;
-}
-
-.header .cart-items-container .cart-item .fa-times {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--black);
-}
-
-.header .cart-items-container .cart-item .fa-times:hover {
-    color: var(--main-color);
-}
-
-.header .cart-items-container .cart-item img {
-    height: 7rem;
-}
-
-.header .cart-items-container .cart-item .content h3 {
-    font-size: 2rem;
-    color: var(--black);
-    padding-bottom: .5rem;
-}
-
-.header .cart-items-container .cart-item .content .price {
+    margin-top: 1rem;
     font-size: 1.5rem;
-    color: var(--main-color);
 }
 
-.header .cart-items-container .btn {
-    width: 100%;
-    text-align: center;
+#cart-items li:nth-last-child(1) {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#clear-cart:hover,
+#check-out:hover {
+    background-color: #cc2900;
+}
+
+.header .cart-items-container li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.header .cart-items-container li span:nth-child(1) {
+    flex-grow: 1;
+    margin-right: 1rem;
 }
 
 .home {
@@ -251,7 +249,7 @@ section {
 .home .login_container {
     display: block;
     flex: 1 1 45rem;
-    background-color: grey;
+    background-color: var(--black);
     padding: 7%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 35vw;

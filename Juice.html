@@ -11,6 +11,8 @@
     />
     <!-- custom css link -->
     <link rel="stylesheet" href="app.css" />
+    <!-- javascript link -->
+    <script type="module" src="script.js" defer></script>
 </head>
 
 <body>
@@ -56,37 +58,37 @@
     <!-- header section ends here -->
     <section class="menu" id="fruits">
         <h1 class="heading">Select your favorite flavour below</h1>
-        <div class="box-container">
+        <div class="box-container" id="product-list">
             <div class="box">
                 <img src="image/Orange juice.jpeg">
                 <h3>Orange juice</h3>
-                <div class="price">ksh 30</div>
-                <a href="#" class="btn">add to cart</a>
+                <div class="price">ksh 50</div>
+                <button class="add-to-cart" data-id="product-3.1">Add to Cart</button>
 
             </div>
             <div class="box">
                 <img src="image/Mango juice.jpeg">
                 <h3>mango juice</h3>
-                <div class="price"> ksh 30</div>
-                <a href="#" class="btn">add to cart</a>
+                <div class="price"> ksh 50</div>
+                <button class="add-to-cart" data-id="product-3.2">Add to Cart</button>
             </div>
             <div class="box">
                 <img src="image/Pineaplle juice.jpeg">
                 <h3>Pineapple juice</h3>
-                <div class="price"> ksh 50</div>
-                <a href="#" class="btn">add to cart</a>
+                <div class="price"> ksh 80</div>
+                <button class="add-to-cart" data-id="product-3.3">Add to Cart</button>
             </div>
             <div class="box">
                 <img src="image/passion fruit juice.jpg">
                 <h3>Passion fruit juice</h3>
                 <div class="price"> ksh 55</div>
-                <a href="#" class="btn">add to cart</a>
+                <button class="add-to-cart" data-id="product-3.4">Add to Cart</button>
             </div>
             <div class="box">
                 <img src="image/Avocado juice.jpeg">
                 <h3>Avocado juice</h3>
                 <div class="price"> ksh 50</div>
-                <a href="#" class="btn">add to cart</a>
+                <button class="add-to-cart" data-id="product-3.5">Add to Cart</button>
             </div>
         </div>
 
