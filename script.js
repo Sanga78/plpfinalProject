@@ -129,17 +129,18 @@ document.querySelector('#cart-btn').onclick = () => {
     searchForm.classList.remove('active');
 }
 
-window.onscroll = () => {
-    navbar.classList.remove('active');
-    searchForm.classList.remove('active');
-    cartItem.classList.remove('active');
-}
-
 var modal = document.getElementById('login-form');
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+window.onscroll = () => {
+    navbar.classList.remove('active');
+    searchForm.classList.remove('active');
+    cartItem.classList.remove('active');
+    modal.style.display = "none";
 }
 
 // adding and removing the items to cart
