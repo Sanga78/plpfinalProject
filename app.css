@@ -221,7 +221,7 @@ button {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(projectImages/home-bg.jpg) no-repeat;
+    background: url(projectImages/Home.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     flex-wrap: wrap;
@@ -238,12 +238,18 @@ button {
     color: var(--main-color);
 }
 
+.home .content h3 span {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
 .home .content p {
     font-size: 1rem;
     font-weight: lighter;
     line-height: 1.8;
     padding: 1rem 0;
-    color: var(--black);
+    color: #fff;
 }
 
 .home .login_container {
@@ -718,5 +724,8 @@ button {
 @media(max-width: 450px) {
     html {
         font-size: 50%;
+    }
+    .login {
+        display: none;
     }
 }
