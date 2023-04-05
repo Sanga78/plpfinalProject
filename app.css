@@ -292,6 +292,7 @@ button {
 }
 
 .home .login_container input {
+    text-transform: none;
     margin-bottom: 3%;
 }
 
