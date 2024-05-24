@@ -689,14 +689,16 @@ button {
     }
     .header .navbar {
         position: absolute;
-        top: 100;
-        right: -100%;
+        top: 0;
+        right: 0;
         background: #fff;
         width: 30rem;
         height: calc(100vh - 9.5rem);
+        display: none;
+        
     }
     .header .navbar .active {
-        right: 0;
+        display: block;
     }
     .header .navbar a {
         color: var(--black);
@@ -725,8 +727,5 @@ button {
 @media(max-width: 450px) {
     html {
         font-size: 50%;
-    }
-    .login {
-        display: none;
     }
 }
